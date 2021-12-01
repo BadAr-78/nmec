@@ -363,8 +363,8 @@ session_start(); ?>
 
                                                 <div class="w-100 text-center">
                                                     <!-- <button id="tktsNext" class="btn btn-primary rounded-0">Next</button> -->
-                                                    <a class="button button-lg button-primary button-ujarak" id="to-contact-details">NEXT</a>
-                                                    <!-- <a class="button button-lg button-primary button-ujarak" id="to-contact-details" href="contact-details.php">NEXT</a> -->
+                                                    <!-- <a class="button button-lg button-primary button-ujarak" id="to-contact-details">NEXT</a> -->
+                                                    <a class="button button-lg button-primary button-ujarak" id="to-contact-details" href="contact-details.php">NEXT</a>
                                                     <script>
                                                         document.getElementById("to-contact-details").addEventListener("click", toContactDetails);
                                                         function toContactDetails() {
