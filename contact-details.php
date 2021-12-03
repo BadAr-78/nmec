@@ -72,13 +72,26 @@ session_start(); ?>
 
                                                         let tickets = JSON.parse(localStorage.getItem("saved_tickets"))
                                                         let ticket = tickets[tickets.length - 1].id
-                                                        // console.log(ticket)
+                                                        let date = tickets[tickets.length - 1].visit_data
+                                                        let nationality = tickets[tickets.length - 1].nationality
+                                                        let total = tickets[tickets.length - 1].total
+                                                        
+                                                        
+                                                        let type = 0
+                                                        ticket.eg_std > 0 ? type = "Student" :
+                                                            ticket.ar_std > 0 ? type = "Student" :
+                                                            ticket.other_std > 0 ? type = "Student" : type = "Visitor"
+
                                                         let payload = {
                                                             id: Date.now(),
                                                             username: username,
                                                             email: email,
                                                             phone: phone,
-                                                            ticket: ticket
+                                                            ticket: ticket,
+                                                            date: date,
+                                                            total: total,
+                                                            nationality: nationality,
+                                                            type: type
                                                         }
 
                                                         let old = JSON.parse(localStorage.getItem("users"))

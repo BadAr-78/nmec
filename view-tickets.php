@@ -31,7 +31,7 @@ session_start(); ?>
                                                             <th scope="col">Visit Date</th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody>
+                                                    <tbody id="tbody">
                                                         <tr>
                                                             <th scope="row">1</th>
                                                             <td>Mohamed Badar</td>
@@ -40,22 +40,28 @@ session_start(); ?>
                                                             <td><span>400</span> <small>EGP</small></td>
                                                             <td>5/1/2021</td>
                                                         </tr>
-                                                        <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>Mohamed Badar</td>
-                                                            <td>mohamedbadar218@gmail.com</td>
-                                                            <td>2</td>
-                                                            <td><span>400</span> <small>EGP</small></td>
-                                                            <td>5/1/2021</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">3</th>
-                                                            <td>Mohamed Badar</td>
-                                                            <td>mohamedbadar218@gmail.com</td>
-                                                            <td>2</td>
-                                                            <td><span>400</span> <small>EGP</small></td>
-                                                            <td>5/1/2021</td>
-                                                        </tr>
+                                                        <script>
+                                                            (function() {
+
+                                                                let users = JSON.parse(localStorage.getItem("users"))
+                                                                let data = ''
+                                                                let i = 0
+                                                                users.map(user => {
+                                                                    data += `
+                                                                    <tr>
+                                                                        <th scope="row">${i+1}</th>
+                                                                        <td>${ user.username }</td>
+                                                                        <td>${ user.email }</td>
+                                                                        <td>${ user.ticket }</td>
+                                                                        <td><span>${ user.total }</span> <small>EGP</small></td>
+                                                                        <td>${user.date}</td>
+                                                                    </tr>
+                                                                    `
+                                                                })
+
+                                                                document.getElementById('tbody').innerHTML = data
+                                                            })()
+                                                        </script>
                                                     </tbody>
                                                 </table>
                                             </div>
