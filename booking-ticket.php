@@ -63,6 +63,7 @@ session_start(); ?>
 
                                                 <script>
                                                     document.getElementById("egyption").addEventListener("click", handelEgyption);
+
                                                     function handelEgyption() {
                                                         console.log("handel egyption run")
 
@@ -72,9 +73,29 @@ session_start(); ?>
                                                         element2.classList.add("d-none");
                                                         var element3 = document.getElementById("MainLevelOptions_CFC010B4-052B-558A-311F-0175D74E16CB");
                                                         element3.classList.add("d-none");
+
+                                                        document.getElementById("egv-sub").innerHTML = 0
+                                                        document.getElementById("egs-sub").innerHTML = 0
+                                                        document.getElementById("eg-visitor").value = 0
+                                                        document.getElementById("eg-std").value = 0
+                                                        document.getElementById("totalEG").innerHTML = 0
+
+                                                        document.getElementById("ar-visitor").value = 0
+                                                        document.getElementById("ar-std").value = 0
+                                                        document.getElementById("arv-sub").innerHTML = 0
+                                                        document.getElementById("ars-sub").innerHTML = 0
+                                                        document.getElementById("totalAR").innerHTML = 0
+
+                                                        document.getElementById("other-vs").value = 0
+                                                        document.getElementById("other-std").value = 0
+                                                        document.getElementById("other-sub").innerHTML = 0
+                                                        document.getElementById("otherstd-sub").innerHTML = 0
+                                                        document.getElementById("totalOther").innerHTML = 0
+
                                                     }
 
                                                     document.getElementById("arab").addEventListener("click", handelArabs);
+
                                                     function handelArabs() {
                                                         console.log("handel arab run")
                                                         var element = document.getElementById("MainLevelOptions_CF452C5A-2F84-EF68-30C6-0175D74DD037");
@@ -83,9 +104,28 @@ session_start(); ?>
                                                         element2.classList.remove("d-none");
                                                         var element3 = document.getElementById("MainLevelOptions_CFC010B4-052B-558A-311F-0175D74E16CB");
                                                         element3.classList.add("d-none");
+
+                                                        document.getElementById("egv-sub").innerHTML = 0
+                                                        document.getElementById("egs-sub").innerHTML = 0
+                                                        document.getElementById("eg-visitor").value = 0
+                                                        document.getElementById("eg-std").value = 0
+                                                        document.getElementById("totalEG").innerHTML = 0
+
+                                                        document.getElementById("ar-visitor").value = 0
+                                                        document.getElementById("ar-std").value = 0
+                                                        document.getElementById("arv-sub").innerHTML = 0
+                                                        document.getElementById("ars-sub").innerHTML = 0
+                                                        document.getElementById("totalAR").innerHTML = 0
+
+                                                        document.getElementById("other-vs").value = 0
+                                                        document.getElementById("other-std").value = 0
+                                                        document.getElementById("other-sub").innerHTML = 0
+                                                        document.getElementById("otherstd-sub").innerHTML = 0
+                                                        document.getElementById("totalOther").innerHTML = 0
                                                     }
 
                                                     document.getElementById("other").addEventListener("click", handelOthers);
+
                                                     function handelOthers() {
                                                         console.log("handel other run")
                                                         var element = document.getElementById("MainLevelOptions_CF452C5A-2F84-EF68-30C6-0175D74DD037");
@@ -94,6 +134,24 @@ session_start(); ?>
                                                         element2.classList.add("d-none");
                                                         var element3 = document.getElementById("MainLevelOptions_CFC010B4-052B-558A-311F-0175D74E16CB");
                                                         element3.classList.remove("d-none");
+
+                                                        document.getElementById("egv-sub").innerHTML = 0
+                                                        document.getElementById("egs-sub").innerHTML = 0
+                                                        document.getElementById("eg-visitor").value = 0
+                                                        document.getElementById("eg-std").value = 0
+                                                        document.getElementById("totalEG").innerHTML = 0
+
+                                                        document.getElementById("ar-visitor").value = 0
+                                                        document.getElementById("ar-std").value = 0
+                                                        document.getElementById("arv-sub").innerHTML = 0
+                                                        document.getElementById("ars-sub").innerHTML = 0
+                                                        document.getElementById("totalAR").innerHTML = 0
+
+                                                        document.getElementById("other-vs").value = 0
+                                                        document.getElementById("other-std").value = 0
+                                                        document.getElementById("other-sub").innerHTML = 0
+                                                        document.getElementById("otherstd-sub").innerHTML = 0
+                                                        document.getElementById("totalOther").innerHTML = 0
                                                     }
                                                 </script>
 
@@ -127,13 +185,32 @@ session_start(); ?>
                                                                     <div> <small>EGP</small> <span class="ticketDisplayPrice" data-entityid="AF87EEDF-D384-522C-53B1-0175BD3FC161" data-entitytype="12">60.00</span></div>
                                                                     <div class="ticketOriginalPrice d-none" data-entityid="AF87EEDF-D384-522C-53B1-0175BD3FC161" data-entitytype="12"><small> EGP</small>60.00 </div>
                                                                 </td>
-                                                                <td id="egv-sub"class="saleitemsubtotal" data-entityid="AF87EEDF-D384-522C-53B1-0175BD3FC161" data-entitytype="12">0.00
+                                                                <td id="egv-sub" class="saleitemsubtotal" data-entityid="AF87EEDF-D384-522C-53B1-0175BD3FC161" data-entitytype="12">0.00
                                                                 </td>
                                                             </tr>
                                                             <script>
                                                                 document.getElementById("eg-visitor").addEventListener("change", handelEG);
+
                                                                 function handelEG() {
                                                                     document.getElementById("egv-sub").innerHTML = document.getElementById("eg-visitor").value * 60
+
+                                                                    // document.getElementById("egv-sub").innerHTML = 0
+                                                                    document.getElementById("egs-sub").innerHTML = 0
+                                                                    // document.getElementById("eg-visitor").value = 0
+                                                                    document.getElementById("eg-std").value = 0
+                                                                    // document.getElementById("totalEG").innerHTML = 0
+
+                                                                    document.getElementById("ar-visitor").value = 0
+                                                                    document.getElementById("ar-std").value = 0
+                                                                    document.getElementById("arv-sub").innerHTML = 0
+                                                                    document.getElementById("ars-sub").innerHTML = 0
+                                                                    document.getElementById("totalAR").innerHTML = 0
+
+                                                                    document.getElementById("other-vs").value = 0
+                                                                    document.getElementById("other-std").value = 0
+                                                                    document.getElementById("other-sub").innerHTML = 0
+                                                                    document.getElementById("otherstd-sub").innerHTML = 0
+                                                                    document.getElementById("totalOther").innerHTML = 0
                                                                 }
                                                             </script>
                                                             <tr data-entityid="3A01ACAE-4C74-81DA-4C69-0175BD3B92AF" data-entitytype="12">
@@ -151,13 +228,32 @@ session_start(); ?>
                                                                     <div> <small>EGP</small> <span class="ticketDisplayPrice" data-entityid="3A01ACAE-4C74-81DA-4C69-0175BD3B92AF" data-entitytype="12">30.00</span></div>
                                                                     <div class="ticketOriginalPrice d-none" data-entityid="3A01ACAE-4C74-81DA-4C69-0175BD3B92AF" data-entitytype="12"><small> EGP</small>30.00 </div>
                                                                 </td>
-                                                                <td id="egs-sub"class="saleitemsubtotal" data-entityid="3A01ACAE-4C74-81DA-4C69-0175BD3B92AF" data-entitytype="12">0.00
+                                                                <td id="egs-sub" class="saleitemsubtotal" data-entityid="3A01ACAE-4C74-81DA-4C69-0175BD3B92AF" data-entitytype="12">0.00
                                                                 </td>
                                                             </tr>
                                                             <script>
                                                                 document.getElementById("eg-std").addEventListener("change", handelEGs);
+
                                                                 function handelEGs() {
                                                                     document.getElementById("egs-sub").innerHTML = document.getElementById("eg-std").value * 30
+
+                                                                    document.getElementById("egv-sub").innerHTML = 0
+                                                                    // document.getElementById("egs-sub").innerHTML = 0
+                                                                    document.getElementById("eg-visitor").value = 0
+                                                                    // document.getElementById("eg-std").value = 0
+                                                                    // document.getElementById("totalEG").innerHTML = 0
+
+                                                                    document.getElementById("ar-visitor").value = 0
+                                                                    document.getElementById("ar-std").value = 0
+                                                                    document.getElementById("arv-sub").innerHTML = 0
+                                                                    document.getElementById("ars-sub").innerHTML = 0
+                                                                    document.getElementById("totalAR").innerHTML = 0
+
+                                                                    document.getElementById("other-vs").value = 0
+                                                                    document.getElementById("other-std").value = 0
+                                                                    document.getElementById("other-sub").innerHTML = 0
+                                                                    document.getElementById("otherstd-sub").innerHTML = 0
+                                                                    document.getElementById("totalOther").innerHTML = 0
                                                                 }
                                                             </script>
                                                             <tr class="totals">
@@ -167,7 +263,7 @@ session_start(); ?>
                                                                     <h3 class="text-success totalfigure">Total</h3>
                                                                 </td>
                                                                 <td>
-                                                                    <h3 class="text-success totalfigure">EGP <span id="totalEG"class="vgs_finaltotal">0.00</span></h3>
+                                                                    <h3 class="text-success totalfigure">EGP <span id="totalEG" class="vgs_finaltotal">0.00</span></h3>
                                                                 </td>
                                                             </tr>
                                                             <script>
@@ -178,6 +274,24 @@ session_start(); ?>
                                                                     let egvt = document.getElementById("eg-visitor").value * 60
                                                                     let egst = document.getElementById("eg-std").value * 30
                                                                     document.getElementById("totalEG").innerHTML = egvt + egst
+
+                                                                    // document.getElementById("egv-sub").innerHTML = 0
+                                                                    // document.getElementById("egs-sub").innerHTML = 0
+                                                                    // document.getElementById("eg-visitor").value = 0
+                                                                    // document.getElementById("eg-std").value = 0
+                                                                    // document.getElementById("totalEG").innerHTML = 0
+
+                                                                    document.getElementById("ar-visitor").value = 0
+                                                                    document.getElementById("ar-std").value = 0
+                                                                    document.getElementById("arv-sub").innerHTML = 0
+                                                                    document.getElementById("ars-sub").innerHTML = 0
+                                                                    document.getElementById("totalAR").innerHTML = 0
+
+                                                                    document.getElementById("other-vs").value = 0
+                                                                    document.getElementById("other-std").value = 0
+                                                                    document.getElementById("other-sub").innerHTML = 0
+                                                                    document.getElementById("otherstd-sub").innerHTML = 0
+                                                                    document.getElementById("totalOther").innerHTML = 0
                                                                 }
                                                             </script>
                                                         </tbody>
@@ -209,7 +323,7 @@ session_start(); ?>
                                                                 </th>
 
                                                                 <td>
-                                                                    <input id="ar-visitor"class="ticketNum" type="number" name="ticketNum" value="0" min="0" step="1" max="10" data-entityid="49CDEB39-4C9F-2FD1-4823-01786E281CA6" data-entitytype="12" data-price="200.00" />
+                                                                    <input id="ar-visitor" class="ticketNum" type="number" name="ticketNum" value="0" min="0" step="1" max="10" data-entityid="49CDEB39-4C9F-2FD1-4823-01786E281CA6" data-entitytype="12" data-price="200.00" />
                                                                 </td>
                                                                 <td>
                                                                     <div> <small>EGP</small> <span class="ticketDisplayPrice" data-entityid="49CDEB39-4C9F-2FD1-4823-01786E281CA6" data-entitytype="12">200.00</span></div>
@@ -220,8 +334,27 @@ session_start(); ?>
                                                             </tr>
                                                             <script>
                                                                 document.getElementById("ar-visitor").addEventListener("change", handelAR);
+
                                                                 function handelAR() {
                                                                     document.getElementById("arv-sub").innerHTML = document.getElementById("ar-visitor").value * 200
+
+                                                                    document.getElementById("egv-sub").innerHTML = 0
+                                                                    document.getElementById("egs-sub").innerHTML = 0
+                                                                    document.getElementById("eg-visitor").value = 0
+                                                                    document.getElementById("eg-std").value = 0
+                                                                    document.getElementById("totalEG").innerHTML = 0
+
+                                                                    // document.getElementById("ar-visitor").value = 0
+                                                                    document.getElementById("ar-std").value = 0
+                                                                    // document.getElementById("arv-sub").innerHTML = 0
+                                                                    document.getElementById("ars-sub").innerHTML = 0
+                                                                    // document.getElementById("totalAR").innerHTML = 0
+
+                                                                    document.getElementById("other-vs").value = 0
+                                                                    document.getElementById("other-std").value = 0
+                                                                    document.getElementById("other-sub").innerHTML = 0
+                                                                    document.getElementById("otherstd-sub").innerHTML = 0
+                                                                    document.getElementById("totalOther").innerHTML = 0
                                                                 }
                                                             </script>
                                                             <tr data-entityid="CE4F5809-E6A3-613E-6E09-01786E2C7E8E" data-entitytype="12">
@@ -244,8 +377,27 @@ session_start(); ?>
                                                             </tr>
                                                             <script>
                                                                 document.getElementById("ar-std").addEventListener("change", handelARs);
+
                                                                 function handelARs() {
                                                                     document.getElementById("ars-sub").innerHTML = document.getElementById("ar-std").value * 100
+
+                                                                    document.getElementById("egv-sub").innerHTML = 0
+                                                                    document.getElementById("egs-sub").innerHTML = 0
+                                                                    document.getElementById("eg-visitor").value = 0
+                                                                    document.getElementById("eg-std").value = 0
+                                                                    document.getElementById("totalEG").innerHTML = 0
+
+                                                                    document.getElementById("ar-visitor").value = 0
+                                                                    // document.getElementById("ar-std").value = 0
+                                                                    document.getElementById("arv-sub").innerHTML = 0
+                                                                    // document.getElementById("ars-sub").innerHTML = 0
+                                                                    // document.getElementById("totalAR").innerHTML = 0
+
+                                                                    document.getElementById("other-vs").value = 0
+                                                                    document.getElementById("other-std").value = 0
+                                                                    document.getElementById("other-sub").innerHTML = 0
+                                                                    document.getElementById("otherstd-sub").innerHTML = 0
+                                                                    document.getElementById("totalOther").innerHTML = 0
                                                                 }
                                                             </script>
                                                             <tr class="totals">
@@ -266,6 +418,24 @@ session_start(); ?>
                                                                     let arvt = document.getElementById("ar-visitor").value * 200
                                                                     let arst = document.getElementById("ar-std").value * 100
                                                                     document.getElementById("totalAR").innerHTML = arvt + arst
+
+                                                                    document.getElementById("egv-sub").innerHTML = 0
+                                                                    document.getElementById("egs-sub").innerHTML = 0
+                                                                    document.getElementById("eg-visitor").value = 0
+                                                                    document.getElementById("eg-std").value = 0
+                                                                    document.getElementById("totalEG").innerHTML = 0
+
+                                                                    // document.getElementById("ar-visitor").value = 0
+                                                                    // document.getElementById("ar-std").value = 0
+                                                                    // document.getElementById("arv-sub").innerHTML = 0
+                                                                    // document.getElementById("ars-sub").innerHTML = 0
+                                                                    // document.getElementById("totalAR").innerHTML = 0
+
+                                                                    document.getElementById("other-vs").value = 0
+                                                                    document.getElementById("other-std").value = 0
+                                                                    document.getElementById("other-sub").innerHTML = 0
+                                                                    document.getElementById("otherstd-sub").innerHTML = 0
+                                                                    document.getElementById("totalOther").innerHTML = 0
                                                                 }
                                                             </script>
                                                         </tbody>
@@ -308,8 +478,27 @@ session_start(); ?>
                                                             </tr>
                                                             <script>
                                                                 document.getElementById("other-vs").addEventListener("change", handelOtherVS);
+
                                                                 function handelOtherVS() {
                                                                     document.getElementById("other-sub").innerHTML = document.getElementById("other-vs").value * 200
+
+                                                                    document.getElementById("egv-sub").innerHTML = 0
+                                                                    document.getElementById("egs-sub").innerHTML = 0
+                                                                    document.getElementById("eg-visitor").value = 0
+                                                                    document.getElementById("eg-std").value = 0
+                                                                    document.getElementById("totalEG").innerHTML = 0
+
+                                                                    document.getElementById("ar-visitor").value = 0
+                                                                    document.getElementById("ar-std").value = 0
+                                                                    document.getElementById("arv-sub").innerHTML = 0
+                                                                    document.getElementById("ars-sub").innerHTML = 0
+                                                                    document.getElementById("totalAR").innerHTML = 0
+
+                                                                    // document.getElementById("other-vs").value = 0
+                                                                    document.getElementById("other-std").value = 0
+                                                                    // document.getElementById("other-sub").innerHTML = 0
+                                                                    document.getElementById("otherstd-sub").innerHTML = 0
+                                                                    // document.getElementById("totalOther").innerHTML = 0
                                                                 }
                                                             </script>
                                                             <tr data-entityid="54C6BEA4-B667-0435-509F-0175BD3E33EE" data-entitytype="12">
@@ -332,8 +521,28 @@ session_start(); ?>
                                                             </tr>
                                                             <script>
                                                                 document.getElementById("other-std").addEventListener("change", handelOtherSTD);
+
                                                                 function handelOtherSTD() {
                                                                     document.getElementById("otherstd-sub").innerHTML = document.getElementById("other-std").value * 100
+
+
+                                                                    document.getElementById("egv-sub").innerHTML = 0
+                                                                    document.getElementById("egs-sub").innerHTML = 0
+                                                                    document.getElementById("eg-visitor").value = 0
+                                                                    document.getElementById("eg-std").value = 0
+                                                                    document.getElementById("totalEG").innerHTML = 0
+
+                                                                    document.getElementById("ar-visitor").value = 0
+                                                                    document.getElementById("ar-std").value = 0
+                                                                    document.getElementById("arv-sub").innerHTML = 0
+                                                                    document.getElementById("ars-sub").innerHTML = 0
+                                                                    document.getElementById("totalAR").innerHTML = 0
+
+                                                                    document.getElementById("other-vs").value = 0
+                                                                    // document.getElementById("other-std").value = 0
+                                                                    document.getElementById("other-sub").innerHTML = 0
+                                                                    // document.getElementById("otherstd-sub").innerHTML = 0
+                                                                    // document.getElementById("totalOther").innerHTML = 0
                                                                 }
                                                             </script>
                                                             <tr class="totals">
@@ -343,7 +552,7 @@ session_start(); ?>
                                                                     <h3 class="text-success totalfigure">Total</h3>
                                                                 </td>
                                                                 <td>
-                                                                    <h3 class="text-success totalfigure">EGP <span id="totalOther"class="vgs_finaltotal">0.00</span></h3>
+                                                                    <h3 class="text-success totalfigure">EGP <span id="totalOther" class="vgs_finaltotal">0.00</span></h3>
                                                                 </td>
                                                             </tr>
                                                             <script>
@@ -354,6 +563,24 @@ session_start(); ?>
                                                                     let arvt = document.getElementById("other-vs").value * 200
                                                                     let arst = document.getElementById("other-std").value * 100
                                                                     document.getElementById("totalOther").innerHTML = arvt + arst
+
+                                                                    document.getElementById("egv-sub").innerHTML = 0
+                                                                    document.getElementById("egs-sub").innerHTML = 0
+                                                                    document.getElementById("eg-visitor").value = 0
+                                                                    document.getElementById("eg-std").value = 0
+                                                                    document.getElementById("totalEG").innerHTML = 0
+
+                                                                    document.getElementById("ar-visitor").value = 0
+                                                                    document.getElementById("ar-std").value = 0
+                                                                    document.getElementById("arv-sub").innerHTML = 0
+                                                                    document.getElementById("ars-sub").innerHTML = 0
+                                                                    document.getElementById("totalAR").innerHTML = 0
+
+                                                                    // document.getElementById("other-vs").value = 0
+                                                                    // document.getElementById("other-std").value = 0
+                                                                    // document.getElementById("other-sub").innerHTML = 0
+                                                                    // document.getElementById("otherstd-sub").innerHTML = 0
+                                                                    // document.getElementById("totalOther").innerHTML = 0
                                                                 }
                                                             </script>
                                                         </tbody>
@@ -367,6 +594,7 @@ session_start(); ?>
                                                     <a class="button button-lg button-primary button-ujarak" id="to-contact-details" href="contact-details.php">NEXT</a>
                                                     <script>
                                                         document.getElementById("to-contact-details").addEventListener("click", toContactDetails);
+
                                                         function toContactDetails() {
                                                             console.log("to-contact-details")
                                                             let date = document.getElementById('date').value
@@ -377,7 +605,7 @@ session_start(); ?>
                                                             let ar_std = document.getElementById("ar-std").value
                                                             let other_visitor = document.getElementById('other-vs').value
                                                             let other_std = document.getElementById('other-std').value
-                                                            let total = (eg_visitor*60) + (eg_std*30) + (ar_visitor*200) + (ar_std*100) + (other_visitor*200) + (other_std*100)
+                                                            let total = (eg_visitor * 60) + (eg_std * 30) + (ar_visitor * 200) + (ar_std * 100) + (other_visitor * 200) + (other_std * 100)
                                                             let payload = {
                                                                 visit_data: date,
                                                                 nationality: nationality,
@@ -388,11 +616,11 @@ session_start(); ?>
                                                                 other_visitor: other_visitor,
                                                                 other_std: other_std,
                                                                 total: total,
-                                                                created_at: Date.now()
+                                                                id: Date.now()
                                                             }
                                                             console.log("done")
                                                             let old = JSON.parse(localStorage.getItem("saved_tickets"))
-                                                            let tickets = old ? [...old , payload ]: [payload]
+                                                            let tickets = old ? [...old, payload] : [payload]
                                                             console.log(tickets)
                                                             localStorage.setItem("saved_tickets", JSON.stringify(tickets));
                                                         }

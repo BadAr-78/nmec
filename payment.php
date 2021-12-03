@@ -6,7 +6,7 @@ session_start(); ?>
 <br>
 
 <!--  -->
-<main class="container imgcontainer tktsmain">
+<main id='body' class="container imgcontainer tktsmain">
     <div id="dnn_ContentPane" class="info_side2 w-100">
         <div class="DnnModule DnnModule-VGSB2CNMECCheckOut DnnModule-396"><a name="396"></a>
             <div class="DNNContainer_noTitle">
@@ -40,24 +40,83 @@ session_start(); ?>
                                                             <div class="row">
                                                                 <h4 class="text-center py-2"><i class="fa fa-cart-plus mx-1"></i>Your cart</h4>
                                                                 <div class="w-100 border-top border-bottom mx-auto" id="vgscrt_checkout">
-                                                                    <table class="table borderless w-100">
+                                                                    <table class="table borderless w-100" onload="checkStorage()">
                                                                         <tbody id="vgscrt_cartreview_items">
                                                                             <tr>
-                                                                                <th scope="row">(1) Student - Egyptian</th>
+                                                                                <th scope="row">
+                                                                                    (<span id="num_tickets">1</span>)
+                                                                                    <span id="type">Student</span> -
+                                                                                    <span id="nationality">arab</span>
+                                                                                </th>
                                                                                 <td></td>
-                                                                                <td>EGP 30,00</td>
+                                                                                <td>EGP <span id="cost">30,00</span></td>
                                                                             </tr>
                                                                         </tbody>
                                                                         <tfoot>
                                                                             <tr class="border-top">
                                                                                 <td class="text-success font-weight-bold h5" scope="row">Total</td>
                                                                                 <td></td>
-                                                                                <td class="text-success font-weight-bold h5 ml-auto">EGP <span id="vgscrt_cartreview_totaldisplay">30,00</span></td>
+                                                                                <td class="text-success font-weight-bold h5 ml-auto">EGP <span id="total">30,00</span></td>
                                                                             </tr>
                                                                         </tfoot>
                                                                     </table>
-                                                                </div>
+                                                                    <script>
+                                                                        (function(){
+                                                                            console.log('heer prooo')
+                                                                            let users = JSON.parse(localStorage.getItem("users"))
+                                                                            let user = users[users.length - 1]
 
+                                                                            let tickets = JSON.parse(localStorage.getItem("saved_tickets"))
+                                                                            let ticket = 0
+                                                                            tickets.map(t => {
+                                                                                t.id == user.ticket ? ticket = t : console.log("ticket not found")
+                                                                            })
+
+                                                                            let nationality = 'Egyption'
+                                                                            ticket.nationality == "arab" ? nationality = 'Arab' :
+                                                                                ticket.nationality == "other " ? nationality = 'Other Nationality' :
+                                                                                nationality = 'Egyption'
+
+                                                                            let num_tickets = 0
+                                                                            let num = [
+                                                                                ticket.ar_std,
+                                                                                ticket.ar_visitor,
+                                                                                ticket.eg_std,
+                                                                                ticket.eg_visitor,
+                                                                                ticket.other_std,
+                                                                                ticket.other_visitor
+                                                                            ]
+                                                                            let type = 0
+                                                                            
+                                                                            num.map(n => {
+                                                                                n != 0 ?
+                                                                                num_tickets = n : 0
+                                                                            })
+                                                                            
+                                                                            
+                                                                            ticket.eg_std > 0 ? type="Student" :
+                                                                            ticket.ar_std > 0 ? type="Student" :
+                                                                            ticket.other_std > 0 ? type="Student" : type = "Visitor"
+                                                                            
+                                                                            console.log(num_tickets+".............")
+                                                                            console.log(type+".............")
+
+                                                                            let cost = 0
+
+                                                                            ticket.eg_std > 0 ? cost=30 :
+                                                                            ticket.eg_visitor > 0 ? cost=60 :
+                                                                            ticket.ar_std > 0 || ticket.other_std > 0 ? cost=100 : cost = 200
+
+                                                                            let total = num_tickets * cost 
+
+                                                                            document.getElementById('nationality').innerHTML = nationality
+                                                                            document.getElementById('num_tickets').innerHTML = num_tickets
+                                                                            document.getElementById('type').innerHTML = type
+                                                                            document.getElementById('cost').innerHTML = cost
+                                                                            document.getElementById('total').innerHTML = total
+                                                                        })()
+                                                                    </script>
+                                                                </div>
                                                                 <div class="form-group mb-0  py-2">
                                                                     <div class="custom-control custom-checkbox custom-control-inline" id="checkoutAgreecontainer">
                                                                         <input id="chkterms" type="checkbox" name="chkterms" class="custom-control-input">
@@ -68,7 +127,7 @@ session_start(); ?>
                                                                 <div class="modal fade" style="align-content: center;" id="terms" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
                                                                     <div class="modal-dialog modal-terms" style="align-self: center; margin-left: 500px;">
                                                                         <div class="modal-content" style="width: 900px; text-align: left;">
-                                                                            <div class="modal-header" style="align-self: flex-start" >
+                                                                            <div class="modal-header" style="align-self: flex-start">
                                                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                                                                 <h4 class="modal-title" id="termsLabel">Terms and Conditions</h4>
                                                                             </div>

@@ -40,22 +40,17 @@ session_start(); ?>
 
                                                             <div class="input-group mb-3">
                                                                 <span class="input-group-text" id="basic-addon1">Full Name</span>
-                                                                <input type="text" class="form-control" placeholder="Full Name" aria-label="Username" aria-describedby="basic-addon1">
+                                                                <input id="username" type="text" class="form-control" placeholder="Full Name" aria-label="Username" aria-describedby="basic-addon1">
                                                             </div>
 
                                                             <div class="input-group mb-3">
                                                                 <span class="input-group-text" id="basic-addon1">@Email Address</span>
-                                                                <input type="text" class="form-control" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1">
+                                                                <input id="email" type="text" class="form-control" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1">
                                                             </div>
 
                                                             <div class="input-group mb-3">
-                                                                <span class="input-group-text" id="basic-addon1">@Confirm Email Address</span>
-                                                                <input type="text" class="form-control" placeholder="Confirm Email Address" aria-label="Username" aria-describedby="basic-addon1">
-                                                            </div>
-                                                            
-                                                            <div class="input-group mb-3">
                                                                 <span class="input-group-text" id="basic-addon1">Phone Number</span>
-                                                                <input type="text" class="form-control" placeholder="Phone Number" aria-label="Username" aria-describedby="basic-addon1">
+                                                                <input id="phone" type="text" class="form-control" placeholder="Phone Number" aria-label="Username" aria-describedby="basic-addon1">
                                                             </div>
 
                                                         </div>
@@ -64,8 +59,34 @@ session_start(); ?>
                                                 </div>
                                                 <div class="w-100 text-center">
                                                     <!-- <button id="tktsNext" class="btn btn-primary rounded-0">Next</button> -->
-                                                    <a class="button button-lg button-primary button-ujarak" href="payment.php">NEXT</a>
+                                                    <a id="submit" class="button button-lg button-primary button-ujarak" href="payment.php">NEXT</a>
+                                                    <!-- <a id="submit" class="button button-lg button-primary button-ujarak">NEXT</a> -->
                                                 </div>
+                                                <script>
+                                                    document.getElementById('submit').addEventListener('click', handelSubmit)
+
+                                                    function handelSubmit() {
+                                                        let username = document.getElementById('username').value
+                                                        let email = document.getElementById('email').value
+                                                        let phone = document.getElementById('phone').value
+
+                                                        let tickets = JSON.parse(localStorage.getItem("saved_tickets"))
+                                                        let ticket = tickets[tickets.length - 1].id
+                                                        // console.log(ticket)
+                                                        let payload = {
+                                                            id: Date.now(),
+                                                            username: username,
+                                                            email: email,
+                                                            phone: phone,
+                                                            ticket: ticket
+                                                        }
+
+                                                        let old = JSON.parse(localStorage.getItem("users"))
+                                                        let users = old ? [...old, payload] : [payload]
+                                                        console.log(users)
+                                                        localStorage.setItem("users", JSON.stringify(users));
+                                                    }
+                                                </script>
                                             </div>
                                         </div>
 
