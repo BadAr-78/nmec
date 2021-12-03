@@ -74,7 +74,7 @@ session_start(); ?>
 
                                                                             let nationality = 'Egyption'
                                                                             ticket.nationality == "arab" ? nationality = 'Arab' :
-                                                                                ticket.nationality == "other " ? nationality = 'Other Nationality' :
+                                                                                ticket.nationality == "other" ? nationality = 'Other Nationality' :
                                                                                 nationality = 'Egyption'
 
                                                                             let num_tickets = 0
