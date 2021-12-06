@@ -1,7 +1,25 @@
+<?php
+
+session_start();
+ob_start();
+
+?>
+
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
 
 <head>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+          pageLanguage: 'en'
+        },
+        'google_translate_element'
+      );
+    }
+  </script>
+
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <title>NMEC</title>
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -53,12 +71,12 @@
       <img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.">
     </a>
   </div>
-  <!-- <div class="preloader">
+  <div class="preloader">
     <div class="preloader-body">
       <div class="cssload-container">
         <div class="cssload-speeding-wheel"></div>
       </div>
       <p>Loading...</p>
     </div>
-  </div> -->
+  </div>
   <div class="page">

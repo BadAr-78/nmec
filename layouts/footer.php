@@ -25,6 +25,22 @@
                         <div class="unit-body"><a class="link-location">Ein as Seirah, Old Cairo, Cairo Governorate</a></div>
                       </div>
                     </li>
+                    <li>
+                      <div class="unit">
+                        <div class="unit-body" id="google_translate_element"></div>
+                        <script type="text/javascript">
+                          function googleTranslateElementInit() {
+                            new google.translate.TranslateElement({
+                                pageLanguage: 'en'
+                              },
+                              'google_translate_element'
+                            );
+                          }
+                        </script>
+
+                        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -115,14 +131,14 @@
 
       //   const rbs = document.querySelectorAll('input[name="choice"]');
       //   let selectedValue;
-  
+
       //   for (const rb of rbs) {
       //     if (rb.checked) {
       //       selectedValue = rb.value;
       //       break;
       //     }
       //   }
-  
+
       //   if (selectedValue == "egyption") {
       //     console.log("done.......")
       //     var element = document.getElementById("MainLevelOptions_CF452C5A-2F84-EF68-30C6-0175D74DD037");
@@ -148,24 +164,25 @@
       //   }
       // }())
 
-      function checkRadio(){
+      function checkRadio() {
 
         console.log("heeeeeeer")
-  
-        const rbs = document.querySelectorAll('input[name="MainLevelTabOptions"]');
-              let selectedValue;
-              for (const rb of rbs) {
-                  if (rb.checked) {
-                      selectedValue = rb.value;
-                      console.log(selectedValue)
-                      if(selectedValue=="arab"){
-                        console.log("hear arab")
-                      }
-                  }
-              }
-      }
 
+        const rbs = document.querySelectorAll('input[name="MainLevelTabOptions"]');
+        let selectedValue;
+        for (const rb of rbs) {
+          if (rb.checked) {
+            selectedValue = rb.value;
+            console.log(selectedValue)
+            if (selectedValue == "arab") {
+              console.log("hear arab")
+            }
+          }
+        }
+      }
     </script><!-- End Google Tag Manager -->
+
+
     </body>
 
     </html>
