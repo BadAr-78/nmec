@@ -26,8 +26,7 @@ ob_start();
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <script src="/cdn-cgi/apps/head/3ts2ksMwXvKRuG480KNifJ2_JNM.js"></script>
-  <!-- <link rel="icon" href="imgs/logos/logo-nmec.png" type="image/x-icon"> -->
-  <link rel="icon" href="imgs/logos/logo2.jpg" type="image/x-icon">
+  <link rel="icon" href="imgs/logos/logo-nmec.png" type="image/x-icon">
   <!-- Stylesheets-->
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
   <link rel="stylesheet" href="css/bootstrap.css">

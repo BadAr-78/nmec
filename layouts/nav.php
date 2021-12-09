@@ -11,7 +11,7 @@
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
                   <div class="rd-navbar-brand">
-                    <!--Brand--><a class="brand" href="index.php"><img style="width:150px !important;" src="imgs/logos/logo-nmec.png" alt="" /></a>
+                    <!--Brand--><a class="brand" href="index.php"><img style="width:150px !important;" src="imgs/logos/logo2.jpg" alt="" /></a>
                   </div>
                 </div>
                 <div class="rd-navbar-aside-right rd-navbar-collapse">
